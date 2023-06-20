@@ -1,0 +1,244 @@
+/* body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #02d463;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #02d463;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #00ffba;
+}
+
+.switch {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.switch button {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.switch button.active {
+    background-color: #02d463;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Pacifico&display=swap');
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+}
+.head{
+    font-family: cinzel;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 55px;
+    text-align: center;
+    padding: 2% 0 2%;
+}
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 1% 20px 2%;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: rgb(14,14,14);
+    background: linear-gradient(180deg, rgba(14,14,14,1) 0%, rgba(19,19,19,1) 5%, rgba(34,34,34,1) 30%);
+    transition: none;
+}
+
+.form-container {
+    display: none;
+    transition: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin: 10% 0 5% 0;
+    text-transform: uppercase;
+    font-family: raleway;
+    font-size: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: rgb(31, 31, 31);
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    transition: all 0.7s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #02d463;
+    border-radius: 25px;
+    transition: 0.7s;
+    outline: none!important;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00ac50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(31, 31, 31);
+    color:#00ac50;
+    border: 1px solid #00ac50;
+    border-radius: 50px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: all 0.5s ease;
+}
+
+.switch {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.switch button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.switch button:hover:not(.active) {
+    color: #00ac50;
+    transition: 0.2s ease
+}
+.switch button.active {
+    background-color: #00ac50;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    .switch button {
+        font-size: 14px;
+    }
+}

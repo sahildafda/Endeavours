@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Login & Register</title>
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <link rel="stylesheet" type="text/css" href="./style/particles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div id="particles-js"></div>
+    <div id="container" class="container">
+        <div class="bg-dark">
+            <div class="head">Endevours</div>
+            <div class="switch">
+                <button class="active" id="login-button">Login</button>
+                <button id="register-button">Register</button>
+            </div>
+            <div class="form-container active" id="login-container">
+                <h1>Login</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="form-container" id="register-container">
+            <h1>Register</h1>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Re-Enter your password">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./script/index.js"></script>
+    <script src="./script/particles.min.js"></script>
+    <script src="./script/customParticles.js"></script>
+    
+</body>
+
+</html>

@@ -1,6 +1,6 @@
-Thanks for downloading this template!
+Thanks for visiting and downloading!
 
-Template Name: Personal
-Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Template Name: Endevours Modern
+Author: Team Endevours
+Status: In-Development
+Start Date: June 18th, 2023

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal | codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Progress</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle">2</span>
+            <span class="circle">3</span>
+            <span class="circle">4</span>
+            <span class="circle">5</span>
+            <span class="circle">6</span>
+            <span class="circle">7</span>
+            <div class="progress-bar">
+                <span class="indicator"></span>
+            </div>
+        </div>
+        <div class="form">
+            <form id="form-1" class="childForm" class="hidden">
+                <h1>Education</h1>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" name="degree" placeholder="Enter your degree" required>
+                </div>
+                <div class="form-group">
+                    <label for="institution">Institution</label>
+                    <input type="text" id="institution" name="institution" placeholder="Enter your institution" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter institution location" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-year">Start Year</label>
+                    <input type="month" id="start-year" name="start-year" placeholder="Enter degree start-year" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-year">End Year</label>
+                    <input type="month" id="end-year" name="end-year" placeholder="Enter degree end-year" required>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+            <form id="form-2" style="display: none;">
+                <h1>Experience</h1>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input type="text" id="position" name="position" placeholder="Enter your position" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter company location" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <input type="number" id="duration" name="duration" placeholder="Enter duration" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Enter description" required></textarea>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-achievement-button">Add More</button>
+                <!-- Add form fields for work experience here -->
+            </form>
+            <form id="form-3" style="display: none;">
+                <h1>Projects</h1>
+                <div class="form-group">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" name="project-name" placeholder="Enter your project-name"  required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" placeholder="Enter category"  required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Enter project description"  required></textarea>
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="technologies-used">Technologies Used</label>
+                    <input type="text" id="technologies-used" name="technologies-used" placeholder="Enter technology name"  required>
+                </div>
+
+                <div class="form-group form-group-inline">
+                    <label for="client">Client</label>
+                    <input type="text" id="client" name="client" placeholder="Enter client name"  required>
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="year">Year</label>
+                    <input type="text" id="year" name="year" placeholder="Enter project year"  required>
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date" name="start-date"   required>
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="images">Images</label>
+                    <input type="file" id="images" name="images[]" multiple required>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-more-button">Add More</button>
+                <!-- Add form fields for personal details here -->
+            </form>
+            <form id="form-4" style="display: none;">
+                <h1>Skills</h1>
+                <div class="form-group">
+                    <label for="skill-name">Skill Name</label>
+                    <input type="text" id="skill-name" name="skill-name" placeholder="Enter skill name"  required>
+                </div>
+                <div class="form-group">
+                    <label for="proficiency">Proficiency</label>
+                    <select id="proficiency" name="proficiency" required>
+                        <option value="">Select proficiency</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-more-button">Add More</button>
+                <!-- Add form fields for confirmation here -->
+            </form>
+            <form id="form-5" style="display: none;">
+                <h1>Achievements</h1>
+                <div id="achievements-container">
+                    <div class="achievement">
+                        <div class="form-group">
+                            <label for="achievement-name">Achievement Name</label>
+                            <input type="text" class="achievement-name" name="achievement-name[]" placeholder="Enter achivement name"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="text" class="year" name="year[]" placeholder="Enter achievement year"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="place">Place</label>
+                            <input type="text" class="place" name="place[]" placeholder="Enter achivement place"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="description" name="description[]" rows="4" placeholder="Enter achivement description"  required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-achievement-button">Add More</button>
+            </form>
+            <form id="form-6" style="display: none;">
+                <h1>References</h1>
+                <div id="achievements-container">
+                    <div class="achievement">
+                        <div class="form-group">
+                            <label for="reference-name">Reference Name</label>
+                            <input type="text" class="achivement-name" name="reference-name[]" placeholder="Enter reference-name"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="organisation-name">Organisation Name</label>
+                            <input type="text" class="year" name="organisation-name[]" placeholder="Enter organisation-name"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reference-passion">Passion</label>
+                            <input type="text" class="place" name="reference-passion[]" placeholder="Enter reference-passion"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reference-email">email</label>
+                            <input type="email" class="description" name="reference-email[]" rows="4" placeholder="Enter reference-email"  required></input>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-achievement-button">Add More</button>
+            </form>
+            <form id="form-7" style="display: none;">
+                <h1>Services</h1>
+                <div id="achievements-container">
+                    <div class="achievement">
+                        <div class="form-group">
+                            <label for="service-name">Service Name</label>
+                            <input type="text" class="achivement-name" name="service-name[]" placeholder="Enter service-name"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">Service-Type</label>
+                            <select id="service-type" name="service-type" required>
+                                <option value="">Select proficiency</option>
+                                <option value="freelancing">Freelancing</option>
+                                <option value="fulltime">Full-Time</option>
+                                <option value="parttime">Part-Time</option>
+                                <option value="remote">Remote</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-description">Description</label>
+                            <textarea class="description" name="service-description[]" rows="4" placeholder="Enter service description"  required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+                <button type="button" id="add-achievement-button">Add More</button>
+            </form>
+        </div>
+        <div class="buttons">
+            <button id="prev" style="display: none;">Prev</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

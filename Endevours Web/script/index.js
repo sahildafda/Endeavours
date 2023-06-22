@@ -30,3 +30,32 @@ registerButton.addEventListener('click', function() {
     // Hide the login form
     loginForm.classList.remove('active');
 });
+
+
+//home page script
+// Import jQuery from CDN
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.0.min.js'; // Replace with the desired jQuery version
+document.getElementsByTagName('head')[0].appendChild(script);
+
+// Use jQuery in your code
+function clicked(id){
+    
+}
+
+$(document).ready(function() {
+    $('#mohit').click(function() {
+        console.log("started");
+      // Code to execute when the button is clicked
+      alert('Button clicked!');
+    });
+  });
+
+  $(document).ready(function() {
+    $('.container').mouseenter(function() {
+      $(this).find('.hidden-text').show();
+    }).mouseleave(function() {
+      $(this).find('.hidden-text').hide();
+    });
+  });
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 30%;
+            /* Adjust the width and height to fit your desired circular path */
+            height: 80vh;
+            background: #000;
+            margin: auto 0;
+            
+        }
+
+        .user {
+            position: absolute;
+            width: 100px;
+            /* Adjust the size of each user div */
+            height: 100px;
+            background-color: #ccc;
+            /* Adjust the background color as desired */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user:nth-child(1) {
+            top: 10%;
+            left: 39%;
+            transform: translate(-50%, -50%);
+        }
+
+        .user:nth-child(2) {
+            top: 25%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .user:nth-child(3) {
+            top: 45%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+
+        .user:nth-child(4) {
+            top: 65%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+
+        .user:nth-child(5) {
+            top: 85%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .user:nth-child(6) {
+            top: 100%;
+            left: 39%;
+            transform: translate(-50%, -50%);
+        }
+        /* Add more user div styles as needed */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="user">User 1</div>
+        <div class="user">User 2</div>
+        <div class="user">User 3</div>
+        <div class="user">User 4</div>
+        <div class="user">User 5</div>
+        <div class="user">User 6</div>
+        <!-- Add more user divs as needed -->
+    </div>
+
+</body>
+
+</html>

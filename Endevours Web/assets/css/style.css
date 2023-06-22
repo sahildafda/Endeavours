@@ -14,14 +14,15 @@ body {
   background-color: #040404;
   color: #fff;
   position: relative;
-  background: transparent;
+  background-repeat: no-repeat;
+  
+  background: #040404 url(https://media.licdn.com/dms/image/C4D03AQH9hhI1KVh1dQ/profile-displayphoto-shrink_800_800/0/1659780960416?e=2147483647&v=beta&t=p0-PYxlKBcgO0AqteQ3Hj_phJYji96c5XeyKJP1oSYQ) top right no-repeat
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
-  background-size: cover;
+  
+  
+  background-size: contain;
   left: 0;
   right: 0;
   top: 0;

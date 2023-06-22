@@ -64,9 +64,10 @@ form_3_back_btn.addEventListener("click", function(){
 	form_3_btns.style.display = "none";
 	form_2_btns.style.display = "flex";
 
+	form_3_progessbar.classList.remove("active");
+	form_3_progessbar.classList.remove("completed");
     form_2_progessbar.classList.remove("completed");
     form_2_progessbar.classList.add("active");
-	form_3_progessbar.classList.remove("active");
 });
 
 btn_done.addEventListener("click", function(){
@@ -77,4 +78,25 @@ btn_done.addEventListener("click", function(){
 
 shadow.addEventListener("click", function(){
 	modal_wrapper.classList.remove("active");
+
+	form_1_progessbar.classList.remove("active");
+	form_1_progessbar.classList.add("active");
+	form_1_progessbar.classList.remove("completed");
+
+	form_2_progessbar.classList.remove("active");
+	form_2_progessbar.classList.remove("completed");
+
+	form_3_progessbar.classList.remove("active");
+	form_3_progessbar.classList.remove("completed");
+
+	form_1.style.display = "block";
+	form_2.style.display = "none";
+	form_3.style.display = "none";
+
+	form_1_btns.style.display = "flex";
+	form_2_btns.style.display = "none";
+	form_3_btns.style.display = "none";
+	
+	window.location.replace('index.html');
+
 })

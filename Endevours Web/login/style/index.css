@@ -15,8 +15,140 @@ body {
     list-style: none;
     outline: none;
     font-family: poppins;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus {
+    outline: none;
 }
 
+.toggle-button-cover {
+    display: flex;
+    position: absolute;
+    top:90%;
+    left: 88%;
+    width: 115px;
+    height: 80px;
+    box-sizing: border-box;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    
+}
+
+.button-cover {
+    margin: 20px;
+    background-color: transparent;
+    box-shadow: 0 0px 15px 1px #00ac50;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .button.b2 {
+    border-radius: 2px;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: #222;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+
+/* Button 3 */
+#button-3 .knobs:before {
+    content: "OFF";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #00ac50;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+
+  #button-3 input[type="checkbox"] {
+    width: 100%;
+    height: 100%;
+  }
+  #button-3 .checkbox:active + .knobs:before {
+    width: 46px;
+    border-radius: 100px;
+  }
+  
+  #button-3 .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+  }
+  
+  #button-3 .checkbox:checked + .knobs:before {
+    content: "ON";
+    left: 42px;
+    background-color: #222;
+  }
+  
+  #button-3 .checkbox:checked ~ .layer {
+    background-color: #00ac50;
+  }
+
+  .button-cover:hover {
+    box-shadow: 0 0px 20px 6px #00ac50;
+}
 .wrapper{
 	width: 100%;
 	max-width: 100%;
@@ -192,7 +324,7 @@ body {
 	width: 100%;
 	height: 100%;
 	visibility: hidden;
-    z-index: 9999;
+    z-index: 100;
 }
 
 .modal_wrapper .shadow{
@@ -243,7 +375,7 @@ body {
 }
 
 .modal_wrapper.active .success_wrap{
-   opacity: 1;
+    opacity: 1;
 }
 
 .head{
@@ -286,7 +418,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 10% 0 5% 0;
+    margin: 5% 0 5% 0;
     text-transform: uppercase;
     font-family: raleway;
     font-size: 25px;
@@ -303,17 +435,110 @@ label {
 }
 
 
-input::-webkit-calendar-picker-indicator {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
-}
-
-input:hover::-webkit-calendar-picker-indicator {
-    filter: hue-rotate(120deg);
+::-webkit-calendar-picker-indicator {
+    /* Hide the default arrow icon */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: none;
+    padding-right: 20px; /* Add space for the icon */
+    
+    /* Add the SVG icon as a background image */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Crect fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32' x='48' y='80' width='416' height='384' rx='48'/%3E%3Ccircle cx='296' cy='232' r='24'/%3E%3Ccircle cx='376' cy='232' r='24'/%3E%3Ccircle cx='296' cy='312' r='24'/%3E%3Ccircle cx='376' cy='312' r='24'/%3E%3Ccircle cx='136' cy='312' r='24'/%3E%3Ccircle cx='216' cy='312' r='24'/%3E%3Ccircle cx='136' cy='392' r='24'/%3E%3Ccircle cx='216' cy='392' r='24'/%3E%3Ccircle cx='296' cy='392' r='24'/%3E%3Cpath fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32' stroke-linecap='round' d='M128 48v32M384 48v32'/%3E%3Cpath fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32' d='M464 160H48'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px 16px;
     cursor: pointer;
+    filter: invert(1);
+    transition: all 0.3s ease;
 }
 
 textarea{
     resize: none!important;
+}
+
+#forgotPasswordControl{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+}
+#forgotPasswordControl:hover{
+    color: #00ac50;
+}
+
+#forgotPasswordControl input{
+    width: 50%;
+    outline: none;
+}
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    color: #00ac50;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #00ac50;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    background-color: #00ac50;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:focus {
+    outline: max(1px, 0.15em) solid currentColor;
+    outline-offset: max(1px, 0.15em);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.form-group.remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-group.remember .form-control.rememberControl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.form-group.remember{
+    padding: 15px 0 0 0;
+}
+
+.form-group.remember .form-control.rememberControl span {
+    margin-right: 15px;
+    color: #00ac50;
+    scale: 1.5;
+}
+
+.form-group.remember .form-control.rememberControl input[type="checkbox"] {
+    margin-right: 15px;
 }
 
 input[type="email"],
@@ -337,33 +562,59 @@ input[type="text"]:focus,
 input[type="date"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    border-color: #02d463;
+    border-color: #00ac50;
     border-radius: 25px;
     transition: 0.7s;
     outline: none!important;
 }
 
-.wrapper .btns_wrap .common_btns button.btn_done {
-    width: 50%;
+#home-button{
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    color: #fff;
-    background-color: #00ac50;
-    border: none;
+    color: #00ac50;
+    background-color: transparent;
+    border: 1px solid #00ac50;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.5s ease;
 }
-
-.wrapper .btns_wrap .common_btns button.btn_done:hover {
+#home-button:hover {
     background-color: rgb(31, 31, 31);
     color:#00ac50;
     border: 1px solid #00ac50;
     border-radius: 50px;
     transition: all 0.5s ease;
 }
+.login_form_btns{
+    justify-content: space-between;
+    padding: 20px;
+}
 
+.login_form_btns .btn_home,
+.login_form_btns .btn_login{
+    width: 40%;
+}
 
+.login_form_btns .btn_home{
+    padding: 10px;
+    font-size: 16px;
+    color: #00ac50;
+    background-color: transparent;
+    border: 1px solid #00ac50;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+}
+
+.login_form_btns .btn_home:hover{
+    background-color: rgb(31, 31, 31);
+    color:#00ac50;
+    border: 1px solid #00ac50;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
 button[type="submit"] {
     width: 100%;
     padding: 10px;

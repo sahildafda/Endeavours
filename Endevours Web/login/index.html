@@ -14,11 +14,8 @@
 
 <body>
     
-<<<<<<< HEAD
-    <div id="particles-js" class="star_container"></div>
-=======
-    <!-- <div id="particles-js"></div> -->
->>>>>>> 54113fbc4a92ce79321047fc1720e14104645895
+    <!-- <div id="particles-js" class="star_container"></div> -->
+    <div id="particles-js" class="particles-js" style="display: none; opacity: 0;"></div>
     <div id="container" class="container">
         <div class="bg-dark">
             <div class="head">Endeavours</div>
@@ -66,7 +63,7 @@
 
                 <div class="btns_wrap">
                     <div class="common_btns login_form_btns" style="display:flex;">
-                        <button type="button" class="btn_home">
+                        <button type="button" class="btn_home" onclick="	window.location.replace('../index.html');">
                             <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                             Home
                         </button>
@@ -226,7 +223,7 @@
     <div class="toggle-button-cover">
         <div class="button-cover">
             <div class="button r" id="button-3">
-                <input type="checkbox" class="checkbox" id="animation-Button"/>
+                <input type="checkbox" class="checkbox" id="animation-Button" checked/>
                 <div class="knobs"></div>
                 <div class="layer"></div>
             </div>
@@ -234,6 +231,8 @@
     </div>
     
     <script src="./script/index.js"></script>
+    <script src="./script/particles.min.js"></script>
+    <script src="./script/customParticles.js"></script>
     <script src="./script/multi-steps.js"></script>
     
 </body>

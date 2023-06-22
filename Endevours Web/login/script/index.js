@@ -33,17 +33,17 @@ registerButton.addEventListener('click', function() {
 
 
 const checkbox = document.getElementById("animation-Button");
-var starContainer = document.querySelector(".star_container");
+var starContainer = document.querySelector(".particles-js");
+// const worker = new Worker('./script/particlesWebWorker.js');
+
+// worker.onmessage = function(message)
+// {
+//   alert(`${message.data}`);
+// }
 
 function addParticles() {
     starContainer.id = "particles-js";
 }
-
-// Check initial checkbox state on document ready
-if (checkbox.checked) {
-    addParticles();
-}
-
 
 function removeParticles() {
     starContainer.removeAttribute("id");
@@ -60,8 +60,8 @@ function addScripts() {
     customParticlesScript.async = true;
 
     // Append the script elements to the document's head
-    document.head.appendChild(particlesScript);
-    document.head.appendChild(customParticlesScript);
+    document.body.appendChild(particlesScript);
+    document.body.appendChild(customParticlesScript);
 }
 function removeScripts() {
     // Remove script elements for particles.min.js and customParticles.js
@@ -74,6 +74,15 @@ function removeScripts() {
     }
     if (customParticlesScript) {
         customParticlesScript.remove();
+        var statsPanel = document.querySelector('.stats');
+      if (statsPanel) {
+        statsPanel.remove();
+      }
+    }
+
+    starContainer.removeAttribute("id");
+    if (typeof particlesJS !== "undefined") {
+      particlesJS("particles-js", "destroy");
     }
 }
 
@@ -100,11 +109,37 @@ function TestAnim(){
         console.log('Animation Stopped');
     }
 }
-function handleCheckboxChange() {
-    handleScripts();
+
+function disableView() {
+  if (!checkbox.checked) {
+    starContainer.style.opacity = "0";
+    setTimeout(function() {
+      starContainer.style.display = "none";
+    }, 900); // Adjust the duration of the animation (in milliseconds) as needed
+  } else {
+    starContainer.style.display = "block";
+    setTimeout(function() {
+      starContainer.style.opacity = "1";
+    }, 800); // Add a small delay before setting opacity to allow display block to take effect
+  }
 }
+
+// Check initial checkbox state on document ready
+if (checkbox.checked) {
+  disableView();
+}
+
+function handleCheckboxChange() {
+  disableView();
+}
+
 checkbox.addEventListener("change", function() {
-    handleCheckboxChange();
+  handleCheckboxChange();
+  // if(checkbox.checked){
+  //   worker.postMessage('true');
+  // }else{
+  //   worker.postMessage('false');
+  // }
 });
 
 function forgotPassword() {

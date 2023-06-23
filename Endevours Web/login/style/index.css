@@ -185,6 +185,7 @@ body {
 	width: 99%;
 	height: 2px;
 	background: #fff;
+    
 }
 
 .wrapper .header ul li:last-child:before{
@@ -207,7 +208,13 @@ body {
 }
 
 .wrapper .header ul li.active:before{
-	background: #00ac50;
+    background: #fff;
+    transition: all .7s ease;
+}
+
+.wrapper .header ul li.completed:before{
+    background: #00ac50;
+    transition: all .7s ease;
 }
 
 .wrapper .header ul li.active p{

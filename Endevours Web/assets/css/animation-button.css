@@ -1,17 +1,17 @@
 .toggle-button-cover {
-    display: flex;
+    display: flex;  
     position: absolute;
-    width: 115px;
-    height: 80px;
+    width: 75px;
+    height: 40px;
     box-sizing: border-box;
     align-items: center;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%);
     top: 50%;
-    left: 18.3%;
+    left: 18.3%; */
 }
 
 .button-cover {
-    margin: 20px;
+    /* margin: 20px; */
     background-color: transparent;
     box-shadow: 0 0px 15px 1px #00ac50;
     border-radius: 50px;
@@ -122,5 +122,5 @@
   }
 
   .button-cover:hover {
-    box-shadow: 0 0px 20px 6px #00ac50;
+    box-shadow: 0 0px 20px 3px #00ac50;
 }

@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="file" id="imageUpload" accept=".png" />
+    <p id="resultStatus"></p>
+    <div id="resultContainer"></div>
+
+<script>
+    const inputElement = document.getElementById('imageUpload');
+    const maxSizeInBytes = 15 * 1024 * 1024; // 15 MB
+    const aspectRatio = 16 / 9;
+    const resultContainer = document.getElementById('resultContainer');
+    const resultStatus = document.getElementById('resultStatus');
+
+    inputElement.addEventListener('change', handleFileUploadWK);
+
+    function handleFileUploadGS(event) {
+        const file = event.target.files[0];
+        var result = '';
+
+        if (file && file.type === 'image/png') {
+            const fileSize = file.size;
+
+            if (fileSize <= maxSizeInBytes) {
+                const img = new Image();
+                img.src = URL.createObjectURL(file);
+
+                img.onload = function () {
+                    const width = img.naturalWidth;
+                    const height = img.naturalHeight;
+                    const calculatedAspectRatio = width / height;
+
+                    if (Math.abs(calculatedAspectRatio - aspectRatio) < 0.01) {
+                        // Image meets all the requirements
+                        result = 'Image uploaded successfully!';
+
+                        // Create a canvas element
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+
+                        // Set canvas dimensions to match the image
+                        canvas.width = width;
+                        canvas.height = height;
+
+                        // Draw the image on the canvas
+                        ctx.drawImage(img, 0, 0);
+
+                        // Convert the image to grayscale or black and white
+                        const imageData = ctx.getImageData(0, 0, width, height);
+                        const data = imageData.data;
+
+                        for (let i = 0; i < data.length; i += 4) {
+                            // Get the average of red, green, and blue values
+                            const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+
+                            // Set the red, green, and blue values to the average
+                            data[i] = avg; // Red
+                            data[i + 1] = avg; // Green
+                            data[i + 2] = avg; // Blue
+                        }
+
+                        // Update the canvas with the modified image data
+                        ctx.putImageData(imageData, 0, 0);
+
+                        // Get the converted image as a data URL
+                        const convertedImageURL = canvas.toDataURL('image/png');
+                        result = 'Image Converted successfully!';
+
+                        // Display the converted image
+                        const convertedImage = new Image();
+                        convertedImage.src = convertedImageURL;
+                        resultContainer.innerHTML = '';
+                        resultContainer.appendChild(convertedImage);
+
+                        // Perform further processing or submit the form with the converted image
+                    } else {
+                        // Image aspect ratio is not 16:9
+                        result = 'Please upload an image with a 16:9 aspect ratio.';
+                    }
+
+                    resultStatus.textContent = result; // Move the line inside the img.onload event handler
+                };
+            } else {
+                // Image size exceeds the maximum limit
+                result = 'Please upload an image with a maximum size of 15 MB.';
+            }
+        } else {
+            // File is not a PNG image
+            result = 'Please upload a PNG image.';
+        }
+
+        resultStatus.textContent = result; // Move the line inside the handleFileUpload function
+    }
+
+    function handleFileUploadBW(event) {
+        const file = event.target.files[0];
+        var result = '';
+
+        if (file && file.type === 'image/png') {
+            const fileSize = file.size;
+
+            if (fileSize <= maxSizeInBytes) {
+                const img = new Image();
+                img.src = URL.createObjectURL(file);
+
+                img.onload = function () {
+                    const width = img.naturalWidth;
+                    const height = img.naturalHeight;
+                    const calculatedAspectRatio = width / height;
+
+                    if (Math.abs(calculatedAspectRatio - aspectRatio) < 0.01) {
+                        // Image meets all the requirements
+                        result = 'Image uploaded successfully!';
+
+                        // Create a canvas element
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+
+                        // Set canvas dimensions to match the image
+                        canvas.width = width;
+                        canvas.height = height;
+
+                        // Draw the image on the canvas
+                        ctx.drawImage(img, 0, 0);
+
+                        // Convert the image to black and white
+                        const imageData = ctx.getImageData(0, 0, width, height);
+                        const data = imageData.data;
+
+                        for (let i = 0; i < data.length; i += 4) {
+                            // Get the average of red, green, and blue values
+                            const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+
+                            // Set the red, green, and blue values to the average
+                            data[i] = avg; // Red
+                            data[i + 1] = avg; // Green
+                            data[i + 2] = avg; // Blue
+
+                            // Set the alpha value to 255 (fully opaque)
+                            data[i + 3] = 255;
+                        }
+
+                        // Update the canvas with the modified image data
+                        ctx.putImageData(imageData, 0, 0);
+
+                        // Get the converted image as a data URL
+                        const convertedImageURL = canvas.toDataURL('image/png');
+                        result = 'Image Converted successfully!';
+
+                        // Display the converted image
+                        const convertedImage = new Image();
+                        convertedImage.src = convertedImageURL;
+                        resultContainer.innerHTML = '';
+                        resultContainer.appendChild(convertedImage);
+
+                        // Perform further processing or submit the form with the converted image
+                    } else {
+                        // Image aspect ratio is not 16:9
+                        result = 'Please upload an image with a 16:9 aspect ratio.';
+                    }
+
+                    resultStatus.textContent = result;
+                };
+            } else {
+                // Image size exceeds the maximum limit
+                result = 'Please upload an image with a maximum size of 15 MB.';
+                resultStatus.textContent = result;
+            }
+        } else {
+            // File is not a PNG image
+            result = 'Please upload a PNG image.';
+            resultStatus.textContent = result;
+        }
+    }
+
+    function handleFileUploadWK(event) {
+        const file = event.target.files[0];
+
+        if (file && file.type === 'image/png') {
+            const fileSize = file.size;
+
+            if (fileSize <= maxSizeInBytes) {
+                const worker = new Worker('ImageWorker.js');
+
+                worker.onmessage = function(event) {
+                    const { result, convertedImageURL } = event.data;
+
+                    resultStatus.textContent = result;
+
+                    // Display the converted image
+                    const convertedImage = new Image();
+                    convertedImage.src = convertedImageURL;
+                    resultContainer.innerHTML = '';
+                    resultContainer.appendChild(convertedImage);
+                };
+
+                worker.postMessage(file);
+            } else {
+                // Image size exceeds the maximum limit
+                resultStatus.textContent = 'Please upload an image with a maximum size of 15 MB.';
+            }
+        } else {
+            // File is not a PNG image
+            resultStatus.textContent = 'Please upload a PNG image.';
+        }
+    }
+</script>
+</body>
+</html>

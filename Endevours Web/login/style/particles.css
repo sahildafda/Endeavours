@@ -23,6 +23,7 @@ body{
     z-index: 99;
 }
 #particles-js{
+    z-index: -1;
     opacity: 1;
     transition: opacity 0.5s ease;
 }

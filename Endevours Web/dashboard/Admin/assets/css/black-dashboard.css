@@ -184,13 +184,13 @@ sup {
 }
 
 a {
-  color: #e14eca;
+  color: #00ac53;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #c221a9;
+  color: #03e972;
   text-decoration: none;
 }
 
@@ -266,6 +266,18 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
+select > option {
+  color: var(--primary) !important;
+  background-color: #22293b !important;
+  border-radius: 50px !important;
+  border: none !important;
+  offset: none !important;
+  outline: none !important;
+  padding: 55px !important;
+  overflow: hidden;
+}
+
 
 input,
 button,
@@ -13085,11 +13097,11 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 }
 
 .btn-primary {
-  background: #e14eca;
-  background-image: -webkit-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: -o-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: -moz-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+  background: #00ac53;
+  background-image: linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -o-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -moz-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   background-size: 210% 210%;
   background-position: top right;
   background-color: #00ac53;
@@ -13187,11 +13199,11 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary.btn-simple.active:not(:disabled):not(.disabled):active {
   color: #ffffff;
   border-color: #00ac53;
+  background-color: #00ac53 !important;
   background-image: linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   background-image: -webkit-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   background-image: -o-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   background-image: -moz-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
-  background-color: #ba54f5 !important;
   box-shadow: none;
 }
 
@@ -14702,7 +14714,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .form-control:focus {
-  border-color: #e14eca;
+  border-color: #00ac53;
   background-color: transparent;
   box-shadow: none;
 }
@@ -14711,7 +14723,7 @@ fieldset[disabled] .btn-link.active {
 .form-control:focus~.input-group-append .input-group-text,
 .form-control:focus+.input-group-prepend .input-group-text,
 .form-control:focus~.input-group-prepend .input-group-text {
-  border: 1px solid #e14eca;
+  border: 1px solid #00ac53;
   border-left: none;
   background-color: transparent;
 }
@@ -16496,13 +16508,14 @@ h6 {
 }
 
 a {
-  color: #ba54f5;
+  color: #00ac53;
   font-weight: 300;
+  transition: all .3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #e14eca;
+  color: #03e972;
 }
 
 h1,
@@ -19790,7 +19803,7 @@ Copyright (c) 2015 Daniel Eden
 
 .white-content .card:not(.card-white) {
   background: #ffffff;
-  box-shadow: 0 1px 15px 0 rgba(, , , 0.05);
+  box-shadow: 0 1px 15px 0 rgba(0,172 ,83 , 0.05);
 }
 
 .white-content .card:not(.card-white) .card-header {

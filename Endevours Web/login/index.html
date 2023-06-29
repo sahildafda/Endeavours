@@ -5,15 +5,17 @@
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/particles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    
+
     <!-- <div id="particles-js" class="star_container"></div> -->
     <div id="particles-js" class="particles-js" style="display: none; opacity: 0;"></div>
     <div id="container" class="container">
@@ -37,10 +39,11 @@
                 </div>
                 <div class="form-group remember">
                     <label for="rememberMe" class="form-control rememberControl">
-                        <input type="checkbox" id="rememberMe" name="rememberMe" />
+                        <input type="checkbox" id="rememberMe" name="rememberMe" value="1"/>
                         Remember Me
                     </label>
-                    <button id="forgotPasswordControl" href="" onclick="return forgotPassword();" class="form-control forgotPasswordControl rememberControl">
+                    <button id="forgotPasswordControl" href="" onclick="return forgotPassword();"
+                        class="form-control forgotPasswordControl rememberControl">
                         <span class="icon"><ion-icon name="build-outline"></ion-icon></span>
                         Forgot Password
                     </button>
@@ -67,19 +70,64 @@
                             <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                             Home
                         </button>
-                        <button type="submit" class="btn_login" onclick="return event.preventDefault();">Login &nbsp;
+                        <button type="submit" class="btn_login">Login &nbsp;
                             <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
                         </button>
                         <!-- <button type="submit">Register</button> -->
                     </div>
                 </div>
 
+
+                <script>
+                    $(document).ready(function () {
+
+                        $("#forgotPasswordControl").click(function () {
+                            
+                        })
+                        
+
+
+                        $('#login-form').submit(function (event) {
+                            event.preventDefault(); // Prevent default form submission
+
+                            
+                            var email = $("#email").val();
+                            var password = $("#password").val();
+                            var rememberMe = $("#rememberMe").prop('checked');
+
+                            // Perform AJAX request here
+                            $.ajax({
+                                url: "https://localhost:44346/api/User/LoginPage/"+email+","+password,
+                                method: "GET",
+                                success: function (response) {
+                                    // Handle successful response
+                                    if (response == 1) {
+                                        console.log("Login Successfull" + rememberMe);
+                                            
+                                        if (rememberMe == true) {
+                                            //remember me code
+                                        }
+                                        
+                                        // transfer user yo logged in home screen
+                                    }
+                                    else {
+                                        console.log("Login Failed");
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    // Handle error
+                                    console.error(error);
+                                }
+                            });
+                        });
+                    })
+                </script>
             </form>
         </div>
         <div class="form-container" id="register-container">
             <form id="register-form">
                 <h1>Register</h1>
-                <div class="wrapper">          
+                <div class="wrapper">
                     <div class="header">
                         <ul>
                             <li class="active form_1_progressbar">
@@ -107,21 +155,22 @@
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="FirstName">First Name</label>
-                                        <input type="text" id="FirstName" placeholder="Enter your first name" required>
+                                        <input type="text" id="FirstName" placeholder="Enter your first name" name="first_name" required>
                                     </div>
                                     <div class="form-group input_wrap">
                                         <label for="LastName">Last Name</label>
-                                        <input type="text" id="LastName" placeholder="Enter your last name" required>
+                                        <input type="text" id="LastName" name="last_name" placeholder="Enter your last name" required>
                                     </div><br>
                                 </div>
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="PhoneNo">Phone No.</label>
-                                        <input type="text" id="PhoneNo" placeholder="Enter your phone number" maxlength="10" required>
+                                        <input type="text" id="PhoneNo" name="phone_no" placeholder="Enter your phone number"
+                                            maxlength="10" required>
                                     </div>
                                     <div class="form-group input_wrap">
                                         <label for="dateOfBirth">Date of Birth</label>
-                                        <input type="date" id="dateOfBirth" placeholder="" required>
+                                        <input type="date" id="dateOfBirth" name="dob" placeholder="" required>
                                     </div>
                                 </div>
                             </div>
@@ -133,21 +182,22 @@
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="UserName">Username</label>
-                                        <input type="text" id="UserName" placeholder="Enter your username" required>
+                                        <input type="text" id="UserName" name="username" placeholder="Enter your username" required>
                                     </div>
                                     <div class="form-group input_wrap">
                                         <label for="email">Email</label>
-                                        <input type="email" id="email" placeholder="Enter your email">
+                                        <input type="email" id="email" name="email" placeholder="Enter your email">
                                     </div><br>
                                 </div>
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="password">Password</label>
-                                        <input type="password" id="password" placeholder="Enter your password" required>
+                                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
                                     </div>
                                     <div class="form-group input_wrap">
                                         <label for="confirmPassword">Confirm Password</label>
-                                        <input type="password" id="confirmPassword" placeholder="Re-Enter your password" required>
+                                        <input type="password" id="confirmPassword" name="confirm_password" placeholder="Re-Enter your password"
+                                            required>
                                     </div>
                                 </div>
                             </div>
@@ -159,18 +209,16 @@
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="Profession">Profession</label>
-                                        <input type="text" id="Profession" placeholder="Enter your Profession" required>
+                                        <input type="text" id="Profession" placeholder="Enter your Profession" name="profession" required>
                                     </div>
-                                    <div class="form-group input_wrap">
-                                        <label for="email">Email</label>
-                                        <input type="email" id="email" placeholder="Enter your email" required>
-                                    </div><br>
+                                   <br>
                                 </div>
                                 <div class="field-container align-horizontal">
                                     <div class="form-group input_wrap">
                                         <label for="Address">Address</label>
                                         <!-- <input type="text" id="Address" placeholder="Enter your address"> -->
-                                        <textarea name="Address" id="Address" cols="30" rows="3" placeholder="Enter your address" required></textarea>
+                                        <textarea name="Address" id="Address" cols="30" rows="3"
+                                            placeholder="Enter your address" required></textarea>
                                     </div>
                                     <div class="form-group input_wrap">
                                         <label for="City">City</label>
@@ -201,7 +249,8 @@
                                 <span class="icon"><ion-icon name="caret-back-outline"></ion-icon></span>
                                 Back
                             </button>
-                            <button type="submit" class="btn_done" onclick="return event.preventDefault();">Register &nbsp;
+                            <button type="submit" class="btn_done">Register
+                                &nbsp;
                                 <span class="icon"><ion-icon name="checkmark-outline"></ion-icon></span>
                             </button>
                             <!-- <button type="submit">Register</button> -->
@@ -211,6 +260,18 @@
             </form>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('#register-form').submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                console.log("Register form submitted");
+            });
+        })
+    </script>
 
     <div class="modal_wrapper">
         <div class="shadow"></div>
@@ -223,18 +284,18 @@
     <div class="toggle-button-cover">
         <div class="button-cover">
             <div class="button r" id="button-3">
-                <input type="checkbox" class="checkbox" id="animation-Button" checked/>
+                <input type="checkbox" class="checkbox" id="animation-Button" checked />
                 <div class="knobs"></div>
                 <div class="layer"></div>
             </div>
         </div>
     </div>
-    
+
     <script src="./script/index.js"></script>
     <script src="./script/particles.min.js"></script>
     <script src="./script/customParticles.js"></script>
     <script src="./script/multi-steps.js"></script>
-    
+
 </body>
 
 </html>

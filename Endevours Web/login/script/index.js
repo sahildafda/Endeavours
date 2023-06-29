@@ -19,6 +19,7 @@ loginButton.addEventListener('click', function() {
     registerForm.classList.remove('active');
 });
 
+
 registerButton.addEventListener('click', function() {
     // Remove the active class from the login button
     loginButton.classList.remove('active');
@@ -29,7 +30,7 @@ registerButton.addEventListener('click', function() {
     registerForm.classList.add('active');
     // Hide the login form
     loginForm.classList.remove('active');
-});
+});   
 
 function forgotPassword() {
     return Swal.fire({

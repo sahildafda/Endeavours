@@ -4462,7 +4462,7 @@ input[type="button"].btn-block {
 }
 
 .custom-file-input:focus~.custom-file-label {
-  border-color: rgba(50, 151, 211, 0.25);
+  border-color: #00ac53;
   box-shadow: none;
 }
 
@@ -4490,7 +4490,7 @@ input[type="button"].btn-block {
   line-height: 1.428571;
   color: rgba(255, 255, 255, 0.8);
   background-color: transparent;
-  border: 1px solid #cad1d7;
+  border: 1px solid #2b3553;
   border-radius: 0.25rem;
   box-shadow: none;
 }
@@ -5419,9 +5419,10 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
+  font-size: 12px;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
+  padding: 0 1rem;
   margin-bottom: 1rem;
   list-style: none;
   background-color: #1d253b;
@@ -13098,10 +13099,6 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 
 .btn-primary {
   background: #00ac53;
-  background-image: linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
-  background-image: -webkit-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
-  background-image: -o-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
-  background-image: -moz-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   background-size: 210% 210%;
   background-position: top right;
   background-color: #00ac53;
@@ -17499,7 +17496,7 @@ table.tablesorter thead tr .headerSortDown {
 .sidebar .nav li>a+div .nav li>a,
 .off-canvas-sidebar .nav li>a+div .nav li>a {
   margin-top: 0px;
-  padding: 8px 8px;
+  padding: 5px 20px;
 }
 
 .sidebar .nav li>a,
@@ -17818,7 +17815,7 @@ table.tablesorter thead tr .headerSortDown {
   float: right;
   width: 100%;
   min-height: 100vh;
-  border-top: 2px solid #e14eca;
+  border-top: 2px solid #00ac53;
   background: linear-gradient(#1e1e2f, #1e1e24);
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);

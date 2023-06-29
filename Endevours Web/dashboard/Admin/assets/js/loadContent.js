@@ -11,7 +11,7 @@
             var fileUrl = link.getAttribute('href'); // Get the URL of the file
     
             displayLoader();
-    
+         
             // Fetch the file content
             fetch(fileUrl)
             .then(function(response) {

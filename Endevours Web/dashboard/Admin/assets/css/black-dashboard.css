@@ -33,7 +33,7 @@
   --gray-dark: #32325d;
   --light: #ced4da;
   --lighter: #e9ecef;
-  --primary: #00ac50;
+  --primary: #00ac53;
   --secondary: #f4f5f7;
   --success: #00f2c3;
   --info: #1d8cf8;
@@ -184,13 +184,13 @@ sup {
 }
 
 a {
-  color: #e14eca;
+  color: #00ac53;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #c221a9;
+  color: #03e972;
   text-decoration: none;
 }
 
@@ -266,6 +266,18 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
+select > option {
+  color: var(--primary) !important;
+  background-color: #22293b !important;
+  border-radius: 50px !important;
+  border: none !important;
+  offset: none !important;
+  outline: none !important;
+  padding: 55px !important;
+  overflow: hidden;
+}
+
 
 input,
 button,
@@ -2659,15 +2671,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #db2dc0;
-  border-color: #d725bb;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-primary:focus,
@@ -2678,8 +2690,8 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
@@ -4450,7 +4462,7 @@ input[type="button"].btn-block {
 }
 
 .custom-file-input:focus~.custom-file-label {
-  border-color: rgba(50, 151, 211, 0.25);
+  border-color: #00ac53;
   box-shadow: none;
 }
 
@@ -4478,7 +4490,7 @@ input[type="button"].btn-block {
   line-height: 1.428571;
   color: rgba(255, 255, 255, 0.8);
   background-color: transparent;
-  border: 1px solid #cad1d7;
+  border: 1px solid #2b3553;
   border-radius: 0.25rem;
   box-shadow: none;
 }
@@ -5407,9 +5419,10 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
+  font-size: 12px;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
+  padding: 0 1rem;
   margin-bottom: 1rem;
   list-style: none;
   background-color: #1d253b;
@@ -13085,14 +13098,10 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 }
 
 .btn-primary {
-  background: #e14eca;
-  background-image: -webkit-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: -o-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: -moz-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
-  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+  background: #00ac53;
   background-size: 210% 210%;
   background-position: top right;
-  background-color: #e14eca;
+  background-color: #00ac53;
   transition: all 0.15s ease;
   box-shadow: none;
   color: #ffffff;
@@ -13111,11 +13120,11 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .btn-primary:active:hover,
 .btn-primary.active:focus,
 .btn-primary.active:hover {
-  background-color: #ba54f5 !important;
-  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -webkit-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -o-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -moz-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
+  background-color: #00ac53 !important;
+  background-image: linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -o-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -moz-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   color: #ffffff;
   box-shadow: none;
 }
@@ -13156,13 +13165,13 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-primary.btn-simple {
-  color: #e14eca;
-  border-color: #e14eca;
+  color: #00ac53;
+  border-color: #00ac53;
   background: transparent;
 }
 
@@ -13170,15 +13179,15 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary.btn-simple:focus,
 .btn-primary.btn-simple:active,
 .btn-primary.btn-simple:not(:disabled):not(.disabled):active {
-  color: #e14eca;
-  border-color: #e14eca;
+  color: #00ac53;
+  border-color: #00ac53;
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none;
 }
 
 .btn-primary.btn-simple.active {
-  border-color: #e14eca !important;
+  border-color: #00ac53 !important;
 }
 
 .btn-primary.btn-simple.active:hover,
@@ -13186,12 +13195,12 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary.btn-simple.active:active,
 .btn-primary.btn-simple.active:not(:disabled):not(.disabled):active {
   color: #ffffff;
-  border-color: #e14eca;
-  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -webkit-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -o-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-image: -moz-linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
-  background-color: #ba54f5 !important;
+  border-color: #00ac53;
+  background-color: #00ac53 !important;
+  background-image: linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -o-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
+  background-image: -moz-linear-gradient(to bottom left, #00ac53, #04db6c, #00ac53) !important;
   box-shadow: none;
 }
 
@@ -14702,7 +14711,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .form-control:focus {
-  border-color: #e14eca;
+  border-color: #00ac53;
   background-color: transparent;
   box-shadow: none;
 }
@@ -14711,7 +14720,7 @@ fieldset[disabled] .btn-link.active {
 .form-control:focus~.input-group-append .input-group-text,
 .form-control:focus+.input-group-prepend .input-group-text,
 .form-control:focus~.input-group-prepend .input-group-text {
-  border: 1px solid #e14eca;
+  border: 1px solid #00ac53;
   border-left: none;
   background-color: transparent;
 }
@@ -16496,13 +16505,14 @@ h6 {
 }
 
 a {
-  color: #ba54f5;
+  color: #00ac53;
   font-weight: 300;
+  transition: all .3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #e14eca;
+  color: #03e972;
 }
 
 h1,
@@ -17337,11 +17347,11 @@ table.tablesorter thead tr .headerSortDown {
 
 .sidebar,
 .off-canvas-sidebar {
-  background: #ba54f5;
-  background: -webkit-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: -o-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+  background: #00ac53;
+  background: -webkit-linear-gradient(0deg, #00efb1 0%, #00ac53 100%);
+  background: -o-linear-gradient(0deg, #00efb1 0%, #00ac53 100%);
+  background: -moz-linear-gradient(0deg, #00efb1 0%, #00ac53 100%);
+  background: linear-gradient(0deg, #222 0%, #00ac53 100%);
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;
@@ -17486,7 +17496,7 @@ table.tablesorter thead tr .headerSortDown {
 .sidebar .nav li>a+div .nav li>a,
 .off-canvas-sidebar .nav li>a+div .nav li>a {
   margin-top: 0px;
-  padding: 8px 8px;
+  padding: 5px 20px;
 }
 
 .sidebar .nav li>a,
@@ -17805,7 +17815,7 @@ table.tablesorter thead tr .headerSortDown {
   float: right;
   width: 100%;
   min-height: 100vh;
-  border-top: 2px solid #e14eca;
+  border-top: 2px solid #00ac53;
   background: linear-gradient(#1e1e2f, #1e1e24);
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -19790,7 +19800,7 @@ Copyright (c) 2015 Daniel Eden
 
 .white-content .card:not(.card-white) {
   background: #ffffff;
-  box-shadow: 0 1px 15px 0 rgba(, , , 0.05);
+  box-shadow: 0 1px 15px 0 rgba(0,172 ,83 , 0.05);
 }
 
 .white-content .card:not(.card-white) .card-header {

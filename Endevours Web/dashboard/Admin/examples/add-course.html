@@ -1,0 +1,179 @@
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="title">Add Course</h4>
+              </div>
+              <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Courses</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Course</li>
+                </ol>
+              </nav>
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-4 pr-md-1">
+                      <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" class="form-control" placeholder="Author of the course" value="Endeavours">
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-md-1">
+                      <div class="form-group">
+                        <label for="publisher">Publisher</label>
+                        <select name="publisher" class="form-control" id="publisher">
+                          <option class="form-control" value="" disabled selected>Select Publisher</option>
+                          <option class="form-control" value="1">Parth</option>
+                          <option class="form-control" value="2">Sahil</option>
+                          <option class="form-control" value="3">Udemy</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-md-1">
+                      <div class="form-group">
+                        <label>Platform</label>
+                        <select name="platform" class="form-control" id="platform">
+                          <option class="form-control" value="" disabled selected>Select Platform</option>
+                          <option class="form-control" value="1">Youtube</option>
+                          <option class="form-control" value="2">Facebook</option>
+                          <option class="form-control" value="3">Udemy</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-md-1">
+                      <div class="form-group">
+                        <label>Course Title</label>
+                        <input type="text" class="form-control" placeholder="Course Title" value="">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-md-1">
+                      <div class="form-group">
+                        <label>Key Topic Area</label>
+                        <input type="text" class="form-control" placeholder="i.e: Java, Python, Discussion etc." value="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Redirect Link</label>
+                        <!-- <input type="text" class="form-control" name="redirectLink" placeholder="URL" value=""> -->
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="tim-icons icon-link-72"></i>
+                            </div>      
+                          </div>
+                          <input type="text" class="form-control"  name="redirectLink" placeholder="URL" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-md-1">
+                      <div class="form-group">
+                        <label>Thumbnail</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-4 px-md-1">
+                      <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-md-1">
+                      <div class="form-group">
+                        <label>Postal Code</label>
+                        <input type="number" class="form-control" placeholder="ZIP Code">
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea name="Description" rows="4" cols="120" class="form-control" placeholder="Course Description" value=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-fill btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card  text-center" style="width: 25rem;">
+              <img class="card-img-top" src="../assets/img/header.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title fw-bold ">Course Title</h4>
+                <h5 class="card-subtitle mb-2 text-muted"><span class="title" style="color:#00ac53;">Author</span> / Publisher</h5>
+                <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
+                  <div class="card card-plain">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Read More
+
+                            <i class="tim-icons icon-minimal-down"></i>
+                        </a>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        Description
+                      </div>
+                    </div>
+                  </div>   
+                </div>   
+                <!-- <p class="description">Description</p> -->
+                <button onclick="return window.open('https://www.youtube.com', '_blank');" class="btn btn-icon btn-round btn-youtube">
+                  <i class="fab fa-youtube"></i>
+                </button>
+              </div>
+            </div>
+            <!-- <div class="card card-user">
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="author">
+                    <div class="block block-one"></div>
+                    <div class="block block-two"></div>
+                    <div class="block block-three"></div>
+                    <div class="block block-four"></div>
+                    <a href="javascript:void(0)">
+                      <img class="avatar" src="../assets/img/emilyz.jpg" alt="...">
+                      <h5 class="title">Author</h5>
+                    </a>
+                    <p class="description">
+                      Title
+                    </p>
+                  </div>
+                </p>
+                <div class="card-description">
+                  Description
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="button-container">
+                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+                    <i class="fab fa-youtube"></i>
+                  </button>
+                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+                    <i class="fab fa-google-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>

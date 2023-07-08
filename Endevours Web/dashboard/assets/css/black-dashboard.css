@@ -1,21 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard - v1.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*     brand Colors              */
 /* navbar color */
 :root {
   --blue: #5e72e4;
@@ -3138,14 +3120,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #e14eca;
-  border-color: #e14eca;
+  color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-outline-primary:hover {
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-outline-primary:focus,
@@ -3155,7 +3137,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-  color: #e14eca;
+  color: #00ac53;
   background-color: transparent;
 }
 
@@ -3163,8 +3145,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
@@ -3571,7 +3553,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #e14eca;
+  color: #00ac53;
   text-decoration: none;
 }
 
@@ -3884,7 +3866,7 @@ input[type="button"].btn-block {
 .dropdown-item:active {
   color: #ffffff;
   text-decoration: none;
-  background-color: #e14eca;
+  background-color: #00ac53;
 }
 
 .dropdown-item.disabled,
@@ -4250,8 +4232,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked~.custom-control-label::before {
   color: #ffffff;
-  border-color: #e14eca;
-  background-color: #e14eca;
+  border-color: #00ac53;
+  background-color: #00ac53;
   box-shadow: none;
 }
 
@@ -4265,8 +4247,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:not(:disabled):active~.custom-control-label::before {
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
   box-shadow: none;
 }
 
@@ -4318,8 +4300,8 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-  border-color: #e14eca;
-  background-color: #e14eca;
+  border-color: #00ac53;
+  background-color: #00ac53;
   box-shadow: none;
 }
 
@@ -4404,7 +4386,7 @@ input[type="button"].btn-block {
 .custom-select:focus {
   border-color: rgba(50, 151, 211, 0.25);
   outline: 0;
-  box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075), 0 0 0 0 #e14eca;
+  box-shadow: inset 0 1px 2px rgba(34, 42, 66, 0.075), 0 0 0 0 #00ac53;
 }
 
 .custom-select:focus::-ms-value {
@@ -4544,7 +4526,7 @@ input[type="button"].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #e14eca;
+  background-color: #00ac53;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(34, 42, 66, 0.1);
@@ -4576,7 +4558,7 @@ input[type="button"].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #e14eca;
+  background-color: #00ac53;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(34, 42, 66, 0.1);
@@ -4611,7 +4593,7 @@ input[type="button"].btn-block {
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
-  background-color: #e14eca;
+  background-color: #00ac53;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(34, 42, 66, 0.1);
@@ -4755,7 +4737,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #ffffff;
-  background-color: #e14eca;
+  background-color: #00ac53;
 }
 
 .nav-fill .nav-item {
@@ -5175,6 +5157,7 @@ input[type="button"].btn-block {
   color: rgba(255, 255, 255, 0.65);
 }
 
+
 .card {
   position: relative;
   display: flex;
@@ -5425,7 +5408,7 @@ input[type="button"].btn-block {
   padding: 0 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #1d253b;
+  background-color: transparent;
   border-radius: 0.25rem;
 }
 
@@ -5498,8 +5481,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .page-item.disabled .page-link {
@@ -5583,7 +5566,7 @@ a.badge:focus {
 
 .badge-primary {
   color: #ffffff;
-  background-color: #e14eca;
+  background-color: #00ac53;
 }
 
 a.badge-primary:hover,
@@ -5833,7 +5816,7 @@ a.badge-darker.focus {
 }
 
 .alert-primary {
-  color: #e14eca;
+  color: #00ac53;
   background-color: #e66ad2;
   border-color: #e66ad2;
 }
@@ -6027,7 +6010,7 @@ a.badge-darker.focus {
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
-  background-color: #e14eca;
+  background-color: #00ac53;
   transition: width 0.6s ease;
 }
 
@@ -6117,8 +6100,8 @@ a.badge-darker.focus {
 .list-group-item.active {
   z-index: 2;
   color: #ffffff;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
 }
 
 .list-group-horizontal {
@@ -7230,7 +7213,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #e14eca !important;
+  background-color: #00ac53 !important;
 }
 
 a.bg-primary:hover,
@@ -7410,7 +7393,7 @@ button.bg-darker:focus {
 }
 
 .border-primary {
-  border-color: #e14eca !important;
+  border-color: #00ac53 !important;
 }
 
 .border-secondary {
@@ -12440,7 +12423,7 @@ button.bg-darker:focus {
 }
 
 .text-primary {
-  color: #e14eca !important;
+  color: #00ac53 !important;
 }
 
 a.text-primary:hover,
@@ -12945,7 +12928,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 
 .btn.btn-link,
 .navbar .navbar-nav>a.btn.btn-link {
-  color: #344675;
+  color: #00ac53;
 }
 
 .btn.btn-link:hover,
@@ -12956,7 +12939,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .navbar .navbar-nav>a.btn.btn-link:active {
   background-color: transparent !important;
   background-image: none !important;
-  color: #ffffff !important;
+  color: #03e972 !important;
   text-decoration: none;
   box-shadow: none;
 }
@@ -13205,7 +13188,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-primary.btn-link {
-  color: #e14eca;
+  color: #00ac53;
 }
 
 .btn-primary.btn-link:hover,
@@ -13733,7 +13716,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
   transition: all 0.15s ease;
   box-shadow: none;
-  color: #e14eca;
+  color: #00ac53;
 }
 
 .btn-neutral.animation-on-hover:hover {
@@ -15043,7 +15026,7 @@ img {
 }
 
 .modal.modal-primary .modal-content {
-  background-color: #e14eca;
+  background-color: #00ac53;
   color: #ffffff;
 }
 
@@ -15858,7 +15841,7 @@ img {
 }
 
 .navbar.bg-primary {
-  background-color: #e14eca !important;
+  background-color: #00ac53 !important;
 }
 
 .navbar.bg-warning {
@@ -16626,12 +16609,12 @@ p.description {
 }
 
 .blockquote.blockquote-primary {
-  border-color: #e14eca;
-  color: #e14eca;
+  border-color: #00ac53;
+  color: #00ac53;
 }
 
 .blockquote.blockquote-primary small {
-  color: #e14eca;
+  color: #00ac53;
 }
 
 .blockquote.blockquote-danger {
@@ -16692,7 +16675,7 @@ hr {
 }
 
 .table>tbody>tr.table-primary>td {
-  background-color: #e14eca;
+  background-color: #00ac53;
 }
 
 .table>tbody>tr.table-warning>td {
@@ -16739,6 +16722,7 @@ hr {
 .card-tasks .card-body .table {
   margin-bottom: 0;
 }
+
 
 .card-tasks .card-body .table>thead>tr>th,
 .card-tasks .card-body .table>tbody>tr>th,
@@ -16831,6 +16815,7 @@ hr {
 .table-responsive {
   overflow: scroll;
   padding-bottom: 10px;
+  font-size: 0.75rem;
 }
 
 #tables .table-responsive {
@@ -16910,7 +16895,7 @@ table.tablesorter thead tr .headerSortDown {
 .form-check input[type="checkbox"]:checked+.form-check-sign::before,
 .form-check input[type="checkbox"]:checked+.form-check-sign::before {
   border: none;
-  background-color: #e14eca;
+  background-color: #00ac53;
 }
 
 .form-check .form-check-sign::after {
@@ -16993,15 +16978,15 @@ table.tablesorter thead tr .headerSortDown {
 .form-check-radio input[type="radio"]:checked+.form-check-sign::after {
   width: 6px;
   height: 6px;
-  background-color: #e14eca;
-  border-color: #e14eca;
+  background-color: #00ac53;
+  border-color: #00ac53;
   top: 9px;
   left: 6px;
   opacity: 1;
 }
 
 .form-check-radio input[type="radio"]:checked+.form-check-sign::before {
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .form-check-radio input[type="radio"]:checked+.form-check-sign::after {
@@ -17833,7 +17818,7 @@ table.tablesorter thead tr .headerSortDown {
 }
 
 .main-panel[data="primary"] {
-  border-top: 2px solid #e14eca;
+  border-top: 2px solid #00ac53;
 }
 
 .main-panel>.content {
@@ -18509,12 +18494,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 .bd-docs table .datepicker thead th,
 .bd-docs table .datepicker table thead th,
 .bd-docs table .datepicker .tim-icons {
-  color: #e14eca;
+  color: #00ac53;
 }
 
 .bd-docs .bd-example .picker-switch .tim-icons,
 .bd-docs table .picker-switch .tim-icons {
-  color: #e14eca;
+  color: #00ac53;
 }
 
 .bd-docs .footer .container-fluid>nav {
@@ -19017,9 +19002,9 @@ code {
 .input-group-focus .input-group-prepend .input-group-text,
 .input-group-focus .input-group-append .input-group-text {
   background-color: #ffffff;
-  border-color: #e14eca;
+  border-color: #00ac53;
   background-color: transparent;
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .input-group-focus.no-border .input-group-prepend .input-group-text,
@@ -19309,7 +19294,7 @@ textarea.form-control:active {
 .ps .ps__rail-y:focus,
 .ps .ps__rail-x.ps--clicking,
 .ps .ps__rail-y.ps--clicking {
-  background-color: #eee;
+  background-color: transparent;
   opacity: 0.9;
 }
 
@@ -19343,15 +19328,15 @@ textarea.form-control:active {
 .ps__rail-x:hover>.ps__thumb-x,
 .ps__rail-x:focus>.ps__thumb-x,
 .ps__rail-x.ps--clicking .ps__thumb-x {
-  background-color: #999;
-  height: 11px;
+  background-color: #00ac53;
+  height: 10px;
 }
 
 .ps__rail-y:hover>.ps__thumb-y,
 .ps__rail-y:focus>.ps__thumb-y,
 .ps__rail-y.ps--clicking .ps__thumb-y {
-  background-color: #999;
-  width: 11px;
+  background-color: #00ac53;
+  width: 10px;
 }
 
 /* MS supports */
@@ -19689,7 +19674,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .white-content .form-control:focus {
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .white-content .form-group.no-border .form-control,
@@ -19760,7 +19745,7 @@ Copyright (c) 2015 Daniel Eden
 .white-content .input-group-focus .input-group-prepend .input-group-text,
 .white-content .input-group-focus .input-group-append .input-group-text,
 .white-content .input-group-focus .form-control {
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .white-content .input-group-focus.no-border .input-group-prepend .input-group-text,
@@ -20061,7 +20046,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card.card-white .form-control:focus {
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .card.card-white label:not(.btn) {
@@ -20137,7 +20122,7 @@ Copyright (c) 2015 Daniel Eden
 .card.card-white .input-group-focus .input-group-append .input-group-text,
 .card.card-white .input-group-focus .form-control {
   background-color: #ffffff;
-  border-color: #e14eca;
+  border-color: #00ac53;
 }
 
 .card.card-white .input-group-focus.no-border .input-group-prepend .input-group-text,
@@ -20406,6 +20391,29 @@ Copyright (c) 2015 Daniel Eden
 .card-user .card-description {
   margin-top: 30px;
 }
+.paggination{
+  min-height: 200px !important;
+  height: 740px !important;
+}
+.paggination .table {
+  white-space: nowrap !important;
+}
+.paggination .table th,
+.paggination .table td{
+  padding-left: 10px !important;
+}
+.paggination .table-full-width {
+  height: 650px;
+  position: relative;
+}
+
+.paggination .card-body .table thead
+{
+  position: sticky;
+  top: 0;
+  background-color: #27293d;
+  z-index: 1;
+}
 
 .card-tasks {
   height: 473px;
@@ -20427,12 +20435,12 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-tasks .card-body i {
-  color: #9A9A9A;
+  color: #00ac53;
   font-size: 1.4em;
 }
 
 .card-tasks .card-body i:hover {
-  color: #ffffff;
+  color: #03e972;
 }
 
 .card-plain {

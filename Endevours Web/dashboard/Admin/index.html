@@ -53,19 +53,19 @@
                         <li class="link">
                             <a href="./add-course.html">
                                 <i class="tim-icons icon-simple-add "></i>
-                                <p>Add Courses</p>
+                                <p>Add Course</p>
                             </a>
                         </li>
                         <li class="link">
                             <a href="./modify-course.html">
                                 <i class="tim-icons icon-settings "></i>
-                                <p>Modify Courses</p>
+                                <p>Modify Course</p>
                             </a>
                         </li>
                         <li class="link">
                             <a href="./remove-course.html">
                                 <i class="tim-icons icon-simple-delete "></i>
-                                <p>Remove Courses</p>
+                                <p>Remove Course</p>
                             </a>
                         </li>
                     </ul>
@@ -217,14 +217,13 @@
         <!-- End Navbar -->
         <!-- content Here -->
         <div id="content" class="content">
-
         </div>
         <footer class="footer">
             <div class="container-fluid">
             <ul class="nav">
                 <li class="nav-item">
                 <a href="javascript:void(0)" class="nav-link">
-                    Creative Tim
+                    Creative Team
                 </a>
                 </li>
                 <li class="nav-item">
@@ -289,7 +288,6 @@
         </ul>
         </div>
     </div>
-    <script src="../assets/js/loadContent.js"></script>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
@@ -311,18 +309,12 @@
             $sidebar = $('.sidebar');
             $navbar = $('.navbar');
             $main_panel = $('.main-panel');
-
             $full_page = $('.full-page');
-
             $sidebar_responsive = $('body > .navbar-collapse');
             sidebar_mini_active = true;
             white_color = false;
-
             window_width = $(window).width();
-
             fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-
 
             $('.fixed-plugin a').click(function(event) {
             if ($(this).hasClass('switch-trigger')) {
@@ -417,12 +409,12 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
+        $('.table-responsive').each(function() {
+            var ps = new PerfectScrollbar($(this)[0]);
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/loadContent.js"></script>
     <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
     <script>
         window.TrackJS &&

@@ -66,9 +66,6 @@ var seq2 = 0,
         var ps2 = new PerfectScrollbar($(this)[0]);
       });
     }
-
-
-
     $html.addClass('perfect-scrollbar-on');
   } else {
     $html.addClass('perfect-scrollbar-off');

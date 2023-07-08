@@ -2,13 +2,13 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h4 class="title">Add Course</h4>
+                <h4 class="title">Modify Course</h4>
               </div>
               <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">Courses</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Add Course</li>
+                  <li class="breadcrumb-item active" aria-current="page">Modify Course</li>
                 </ol>
               </nav>
               <div class="card-body">
@@ -83,18 +83,6 @@
                         </div>
                       </div>
                     </div>
-                    <!-- <div class="col-md-4 px-md-1">
-                      <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
-                      </div>
-                    </div>
-                    <div class="col-md-4 pl-md-1">
-                      <div class="form-group">
-                        <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
-                      </div>
-                    </div> -->
                   </div>
                   <div class="row">
                     <div class="col-md-8">
@@ -134,7 +122,6 @@
                     </div>
                   </div>   
                 </div>   
-                <!-- <p class="description">Description</p> -->
                 <button onclick="return window.open('https://www.youtube.com', '_blank');" class="btn btn-icon btn-round btn-youtube">
                   <i class="fab fa-youtube"></i>
                 </button>
@@ -177,3 +164,93 @@
             </div> -->
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card paggination">
+              <div class="card-header">
+                <h4 class="title">Available Courses</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-full-width table-responsive">
+                  <table class="table" id="">
+                    <thead class="text-primary">
+                      <tr>
+                        <th>
+                          Sr.
+                        </th>
+                        <th>
+                          Title
+                        </th>
+                        <th>
+                          Description
+                        </th>
+                        <th>
+                          Author
+                        </th>
+                        <th>
+                          Publisher
+                        </th>
+                        <th>
+                          Platform
+                        </th>
+                        <th>
+                          URL
+                        </th>
+                        <th>
+                          Thumbnail
+                        </th>
+                        <th>
+                          Created On
+                        </th>
+                        <th>
+                          Modified On
+                        </th>
+                        <th colspan="3">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="13" class="text-center"><span class='text-primary tim-icons icon-alert-circle-exc'></span>&nbsp;&nbsp;<span class="text-primary">No Records Found</span></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Endeavours - System Tutorials </td>
+                        <td>Brief Explaination about functions of Endeavours.</td>
+                        <td><span class="text-primary">Endeavours</span></td>
+                        <td>Parth Desai</td>
+                        <td>Youtube</td>
+                        <td>www.youtube.com/endeavours/tutorials</td>
+                        <td>tutorials-cover.png</td>
+                        <td>2023-07-04 10:00:00 AM</td>
+                        <td>2023-07-04 10:00:00 AM</td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                            <i class="tim-icons icon-chart-bar-32"></i>
+                          </button>
+                        </td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                            <i class="tim-icons icon-pencil"></i>
+                          </button>
+                        </td>
+                        <td class="td-actions text-right">
+                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                            <i class="tim-icons icon-trash-simple"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<script>
+  $('.table-responsive').each(function() {
+      var ps = new PerfectScrollbar($(this)[0]);
+  });
+</script>

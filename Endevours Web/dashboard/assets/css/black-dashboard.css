@@ -15751,12 +15751,12 @@ img {
 }
 
 .modal-search .modal-content .modal-header {
-  padding: 24px;
+  padding: 10px;
 }
 
 .modal-search .modal-header .close {
   color: #555555;
-  top: 30px !important;
+  top: 19px !important;
 }
 
 .modal-search .modal-footer {

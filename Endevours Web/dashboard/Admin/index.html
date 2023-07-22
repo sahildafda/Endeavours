@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../../../assets/img/EndeavoursFavicon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/logo/EndeavoursFavicon.png">
     <title>
         Endeavours - Admin Dashboard
     </title>
@@ -51,19 +51,19 @@
                 <div class="collapse" id="courses">
                     <ul class="nav">
                         <li class="link">
-                            <a href="./add-course.html">
+                            <a href="./addCourse.html">
                                 <i class="tim-icons icon-simple-add "></i>
                                 <p>Add Course</p>
                             </a>
                         </li>
                         <li class="link">
-                            <a href="./modify-course.html">
+                            <a href="./modifyCourse.html">
                                 <i class="tim-icons icon-settings "></i>
                                 <p>Modify Course</p>
                             </a>
                         </li>
                         <li class="link">
-                            <a href="./remove-course.html">
+                            <a href="./removeCourse.html">
                                 <i class="tim-icons icon-simple-delete "></i>
                                 <p>Remove Course</p>
                             </a>
@@ -79,61 +79,375 @@
                 <div class="collapse" id="ranks">
                     <ul class="nav">
                         <li class="link">
-                            <a href="./add-rank.html">
+                            <a href="./addRank.html">
                                 <i class="tim-icons icon-simple-add "></i>
                                 <p>Add Rank</p>
                             </a>
                         </li>
                         <li class="link">
-                            <a href="./modify-rank.html">
+                            <a href="./modifyRank.html">
                                 <i class="tim-icons icon-settings "></i>
                                 <p>Modify Ranks</p>
                             </a>
                         </li>
                         <li class="link">
-                            <a href="./remove-rank.html">
+                            <a href="./removeRank.html">
                                 <i class="tim-icons icon-simple-delete "></i>
                                 <p>Remove Ranks</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#ePulseEvaluator">
+                                <i class="tim-icons icon-pin"></i>
+                                <p>E-Pulse Evaluator</p>
+                            </a>
+                            <div class="collapse" id="ePulseEvaluator">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./ePulseEvaluatorOperations.html">
+                                            <i class="tim-icons icon-puzzle-10"></i>
+                                            <p>Operations</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./ePulseEvaluatorCore.html">
+                                            <i class="tim-icons icon-sound-wave"></i>
+                                            <p>Core</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./ePulseEvaluatorConfiguration.html">
+                                            <i class="tim-icons icon-settings-gear-63"></i>
+                                            <p>Configuration</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./ePulseEvaluatorListingBoard.html">
+                                            <i class="tim-icons icon-bullet-list-67"></i>
+                                            <p>Listing Board</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="#user">
+                    <i class="tim-icons icon-single-02"></i>
+                    <p>Users</p>
+                </a>
+                <div class="collapse" id="user">
+                    <ul class="nav">
+                        <li class="link">
+                            <a href="./userEmployee.html">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p>Employee</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./userEndeavour.html">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p>Endeavour</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./userOther.html">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p>Other</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#userManage">
+                                <i class="tim-icons icon-settings"></i>
+                                <p>Manage Users</p>
+                            </a>
+                            <div class="collapse" id="userManage">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./userBoard.html">
+                                            <i class="tim-icons icon-bullet-list-67"></i>
+                                            <p>User Board</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./userOperationsRights.html">
+                                            <i class="tim-icons icon-sound-wave"></i>
+                                            <p>Operations Rights</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a data-toggle="collapse" href="#finance">
+                    <i class="tim-icons icon-money-coins"></i>
+                    <p>Finance</p>
+                </a>
+                <div class="collapse" id="finance">
+                    <ul class="nav">
+                        <li class="link">
+                            <a href="./financeBankConfiguration.html">
+                                <i class="tim-icons icon-bank"></i>
+                                <p>Bank Configuration</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./financeListedAccounts.html">
+                                <i class="tim-icons icon-bullet-list-67"></i>
+                                <p>Listed Accounts</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./financeTransactions.html">
+                                <i class="tim-icons icon-credit-card"></i>
+                                <p>Transactions</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li>
-                <a href="./user.html">
-                <i class="tim-icons icon-single-02"></i>
-                <p>Users</p>
+                <a data-toggle="collapse" href="#structure">
+                    <i class="tim-icons icon-align-center"></i>
+                    <p>Structure</p>
                 </a>
+                <div class="collapse" id="structure">
+                    <ul class="nav">
+                        <li>
+                            <a data-toggle="collapse" href="#database">
+                                <i class="tim-icons icon-book-bookmark"></i>
+                                <p>Database</p>
+                            </a>
+                            <div class="collapse" id="database">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./databaseCreate">
+                                            <i class="tim-icons icon-simple-add"></i>
+                                            <p>Create Database</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./databaseManage">
+                                            <i class="tim-icons icon-book-bookmark"></i>
+                                            <p>Manage Database</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./databaseConfigure">
+                                            <i class="tim-icons icon-settings"></i>
+                                            <p>Configure Database</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#tables">
+                                <i class="tim-icons icon-tablet-2"></i>
+                                <p>Tables</p>
+                            </a>
+                            <div class="collapse" id="tables">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./tablesCreate">
+                                            <i class="tim-icons icon-simple-add"></i>
+                                            <p>Create Table</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./tablesManage">
+                                            <i class="tim-icons icon-tablet-2"></i>
+                                            <p>Manage Tables</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#uiDesign">
+                                <i class="tim-icons icon-shape-star"></i>
+                                <p>UI Design</p>
+                            </a>
+                            <div class="collapse" id="uiDesign">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./uiDesignEndeavourFields.html">
+                                            <i class="tim-icons icon-vector"></i>
+                                            <p>Endeavour Fields</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./uiDesignEmployeeFields.html">
+                                            <i class="tim-icons icon-vector"></i>
+                                            <p>Employee Fields</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./uiDesignGeneralFields.html">
+                                            <i class="tim-icons icon-vector"></i>
+                                            <p>General Fields</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./uiDesignGuestFields.html">
+                                            <i class="tim-icons icon-vector"></i>
+                                            <p>Guest Fields</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
-                <a href="./rtl.html">
-                <i class="tim-icons icon-money-coins"></i>
-                <p>Finance</p>
+                <a data-toggle="collapse" href="#reports">
+                    <i class="tim-icons icon-paper "></i>
+                    <p>Reports</p>
                 </a>
+                <div class="collapse" id="reports">
+                    <ul class="nav">
+                        <li class="link">
+                            <a href="./reportsGeneral.html">
+                                <i class="tim-icons icon-notes"></i>
+                                <p>General Reports</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./reportsEPulse.html">
+                                <i class="tim-icons icon-pin"></i>
+                                <p>E-Pulse Reports</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./reportsFinancial.html">
+                                <i class="tim-icons icon-bank"></i>
+                                <p>Financial Reports</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./reportsUser.html">
+                                <i class="tim-icons icon-single-02"></i>
+                                <p>User Reports</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
-                <a href="./typography.html">
-                <i class="tim-icons icon-align-center"></i>
-                <p>Structure</p>
+                <a data-toggle="collapse" href="#communication">
+                    <i class="tim-icons icon-world"></i>
+                    <p>Communication</p>
                 </a>
+                <div class="collapse" id="communication">
+                    <ul class="nav">
+                        <li>
+                            <a data-toggle="collapse" href="#communicationTemplates">
+                                <i class="tim-icons icon-app"></i>
+                                <p>Template</p>
+                            </a>
+                            <div class="collapse" id="communicationTemplates">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./notificationsTemplateCreate.html">
+                                            <i class="tim-icons icon-simple-add"></i>
+                                            <p>Create</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./notificationsTemplateManage.html">
+                                            <i class="tim-icons icon-settings-gear-63"></i>
+                                            <p>Manage</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#notifications">
+                                <i class="tim-icons icon-bell-55"></i>
+                                <p>Notifications</p>
+                            </a>
+                            <div class="collapse" id="notifications">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./notificationsCreate.html">
+                                            <i class="tim-icons icon-simple-add"></i>
+                                            <p>Create</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./reportsFinancial.html">
+                                            <i class="tim-icons icon-lock-circle"></i>
+                                            <p>Validate</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#blogs">
+                                <i class="tim-icons icon-single-copy-04"></i>
+                                <p>Blogs</p>
+                            </a>
+                            <div class="collapse" id="blogs">
+                                <ul class="nav">
+                                    <li class="link">
+                                        <a href="./blogsCreate.html">
+                                            <i class="tim-icons icon-simple-add"></i>
+                                            <p>Create</p>
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="./blogsManage.html">
+                                            <i class="tim-icons icon-settings-gear-63"></i>
+                                            <p>Manage</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
-                <a href="./tables.html">
-                <i class="tim-icons icon-paper "></i>
-                <p>Reports</p>
+                <a data-toggle="collapse" href="#userExperience">
+                    <i class="tim-icons icon-user-run"></i>
+                    <p>User Experience</p>
                 </a>
-            </li>
-            <li>
-                <a href="./notifications.html">
-                <i class="tim-icons icon-bell-55"></i>
-                <p>Notifications</p>
-                </a>
-            </li>
-            <li>
-                <a href="./upgrade.html">
-                <i class="tim-icons icon-user-run"></i>
-                <p>User Experience</p>
-                </a>
+                <div class="collapse" id="userExperience">
+                    <ul class="nav">
+                        <li class="link">
+                            <a href="./userExperienceComplains.html">
+                                <i class="tim-icons icon-alert-circle-exc"></i>
+                                <p>Complains</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./userExperienceRequests.html">
+                                <i class="tim-icons icon-alert-circle-exc"></i>
+                                <p>Requests</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./userExperienceQueries.html">
+                                <i class="tim-icons icon-alert-circle-exc"></i>
+                                <p>Queries</p>
+                            </a>
+                        </li>
+                        <li class="link">
+                            <a href="./userExperienceFeedback.html">
+                                <i class="tim-icons icon-alert-circle-exc"></i>
+                                <p>Feedback</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             </ul>
         </div>
@@ -206,7 +520,7 @@
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="tim-icons icon-simple-remove"></i>
                 </button>

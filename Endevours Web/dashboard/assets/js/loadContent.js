@@ -49,7 +49,7 @@
                                                                             It seems the resource you requested is currently unavailable. 
                                                                             <br> Error Code : <span style='color:#00ac53;'>${error.message}</span>
                                                                             <br><br>
-                                                                            Kindly Refresh the Page.
+                                                                            Kindly contact the support team.
                                                                         <p>
                                                                     </div>`;
                             console.log(error);
@@ -87,7 +87,7 @@
                                                                             It seems the resource you requested is currently unavailable. 
                                                                             <br> Error Code : <span style='color:#00ac53;'>${error.message}</span>
                                                                             <br><br>
-                                                                            Kindly Refresh the Page.
+                                                                            Kindly contact the support team.
                                                                         <p>
                                                                     </div>`;
                             console.log(error);
